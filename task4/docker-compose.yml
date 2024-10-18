@@ -3,36 +3,7 @@ services:
     image: nginx:latest
     ports:
       - HOSTPORT:CONTAINERPORT
-    networks:
-      - front-tier
-      - back-tier
-    configs:
-      - httpd-config
-    secrets:
-      - server-certificate
-
-  backend:
-    image:
-    volumes:
-      
-    networks:
-     
-
-volumes:
-  db-data:
-    driver: 
-    driver_opts:
-      size: 
-
-configs:
-  httpd-config:
-    external:
-
-secrets:
-  server-certificate:
-    external: 
-
-networks:
-  # The presence of these objects is sufficient to define them
-  front-tier:
-  back-tier:
+    build: 250B
+    context: 2.68MB
+    depends_on:
+      - softy-pinko-front-end
