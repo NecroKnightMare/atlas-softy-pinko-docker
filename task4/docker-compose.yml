@@ -1,8 +1,8 @@
 services:
   frontend:
-    image: example/webapp
+    image: nginx:latest
     ports:
-      - "443:8043"
+      - HOSTPORT:CONTAINERPORT
     networks:
       - front-tier
       - back-tier
