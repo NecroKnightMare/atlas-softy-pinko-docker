@@ -1,0 +1,38 @@
+services:
+  frontend:
+    image: example/webapp
+    ports:
+      - "443:8043"
+    networks:
+      - front-tier
+      - back-tier
+    configs:
+      - httpd-config
+    secrets:
+      - server-certificate
+
+  backend:
+    image:
+    volumes:
+      
+    networks:
+     
+
+volumes:
+  db-data:
+    driver: 
+    driver_opts:
+      size: 
+
+configs:
+  httpd-config:
+    external:
+
+secrets:
+  server-certificate:
+    external: 
+
+networks:
+  # The presence of these objects is sufficient to define them
+  front-tier:
+  back-tier:
