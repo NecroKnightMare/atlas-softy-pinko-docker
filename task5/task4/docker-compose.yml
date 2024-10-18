@@ -1,0 +1,10 @@
+services:
+  frontend:
+    image: nginx:latest
+    ports:
+      - HOSTPORT:CONTAINERPORT
+    build: 250B
+    context: 2.68MB
+    dockerfile: task4.dockerfile
+    depends_on:
+      - softy-pinko-front-end
