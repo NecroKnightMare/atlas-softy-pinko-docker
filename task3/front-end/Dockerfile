@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM nginx:latest
 # update apt 
 RUN apt-get update && apt-get upgrade -y
 # install python3 and python-pip
-RUN apt-get python3 install -y python3 python3-pip
+RUN apt-get install -y python3 python3-pip
 # running before installing pip to avoid error
 RUN rm /usr/lib/python*/EXTERNALLY-MANAGED
 # install flask
